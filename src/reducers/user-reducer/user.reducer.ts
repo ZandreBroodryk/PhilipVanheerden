@@ -1,12 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { RootState } from '../store';
-import { userModel } from '../../models';
 import { UserModelProps, UserState } from '../../types';
 
 const initialState: UserState = {
   isLoading: false,
-  user: userModel(),
+  user: {
+    email: '',
+    mobile: '',
+  },
 };
 
 export const userSlice = createSlice({
