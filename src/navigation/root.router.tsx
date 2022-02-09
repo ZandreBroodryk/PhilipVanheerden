@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 
 import {
   HomeScreen,
   NotFound,
 } from '../screens';
-import { ProtectedRoute } from '../components';
+import { AppLayout, RouteWrapper } from '../components';
 
 const RootRouter: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/work" exact component={HomeScreen} />
-        <Route path="*" component={NotFound} />
+        <RouteWrapper path="/work" exact component={HomeScreen} layout={AppLayout}/>
+        <RouteWrapper path="*" component={NotFound} layout={AppLayout}/>
       </Switch>
     </BrowserRouter>
   );

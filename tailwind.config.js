@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: () => ({
         'auth-background': "url('assets/images/auth-background.png')",
+        'color-gradient':  "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0))",
       }),
       minHeight: (theme) => ({
         ...theme('spacing'),

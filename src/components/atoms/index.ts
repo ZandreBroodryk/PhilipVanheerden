@@ -5,3 +5,4 @@ export * from './search-field/search-field';
 export * from './loader/loader';
 export * from './activity-loader/activity-loader';
 export * from './flat-list/flat-list';
+export * from './route-wrapper/route-wrapper';

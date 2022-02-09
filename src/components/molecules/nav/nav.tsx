@@ -74,24 +74,11 @@ export const Nav: React.FC = ({ children }) => {
 
   return (
     <div className="nav-container">
-      <div className="nav-bar-container">
-        <NavIconButton icon="notifications" count={notifications} />
-        <Divider orientation="vertical" flexItem light />
-        <Button
-          aria-controls="simple-menu"
-          aria-haspopup="true"
-          onClick={handleClick}
-          className="mx-1"
-        >
-          <div className="flex mx-1">
-            <Typography>{user.email}</Typography>
-            <KeyboardArrowDown className="mx-1" />
-          </div>
-        </Button>
-        <Avatar src={`https://robohash.org/${user.email}?bgset=bg1`} alt="Logo" />
-      </div>
-      <DropDownMenu />
-      <div className="border-t-2 overflow-y-auto">{children}</div>
+      <nav className='bg-color-gradient fixed top-0 w-screen p-6 justify-between flex flex-row'>
+        <h1 className='text-4xl'>Philip van Heerden</h1>
+        <h1>Work | Collaborate | Info</h1>
+      </nav>
+      <div className="overflow-y-auto pt-12">{children}</div>
     </div>
   );
 };
